@@ -16,7 +16,7 @@ var compression = require('compression');
 // Init App
 var app = express();
 
-mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:3001/cleandb');
+mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:3001/newdb2');
 var db = mongoose.connection;
 
 var routes = require('./routes/index');
@@ -53,8 +53,6 @@ app.use(session({
     saveUninitialized: true,
     resave: true
 }));
-
-
 
 // Express Validator
 app.use(expressValidator({
